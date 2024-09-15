@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://5x7hheb6j5p5"]
+
+[ext_resource type="PackedScene" uid="uid://cns5dddo1yyew" path="res://models/Trigo.blend" id="1_6s4cg"]
+[ext_resource type="Texture2D" uid="uid://1qq86dj8p65x" path="res://addons/kenney_prototype_textures/dark/texture_09.png" id="2_1s3ju"]
+[ext_resource type="Texture2D" uid="uid://bvsmkkmeoxg75" path="res://addons/kenney_prototype_textures/orange/texture_02.png" id="3_5x57a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hexmw"]
+albedo_texture = ExtResource("2_1s3ju")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_550ab"]
+albedo_texture = ExtResource("3_5x57a")
+uv1_triplanar = true
+
+[node name="Trigo" instance=ExtResource("1_6s4cg")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hexmw")
+surface_material_override/1 = SubResource("StandardMaterial3D_550ab")
